@@ -9,8 +9,8 @@ UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-USUARIO_CORRECTO = "admin"
-PASSWORD_CORRECTO = "1234"
+USUARIO_CORRECTO = "callejon22"
+PASSWORD_CORRECTO = "urbano2121"
 
 def init_db():
     conn = sqlite3.connect('inventario.db')
@@ -30,6 +30,7 @@ def init_db():
     conn.commit()
     conn.close()
 
+# Algoritmo de Ordenamiento de Burbuja (Bubble Sort)
 def ordenamiento_burbuja(lista, criterio='id'):
     n = len(lista)
     lista = [list(elem) for elem in lista]
@@ -78,8 +79,8 @@ def index():
     if busqueda:
         cursor.execute('''
             SELECT * FROM productos 
-            WHERE nombre LIKE ? OR categoria LIKE ? OR color LIKE ?
-        ''', (f'%{busqueda}%', f'%{busqueda}%', f'%{busqueda}%'))
+            WHERE nombre LIKE ? OR categoria LIKE ? OR color LIKE ? OR talla LIKE ?
+        ''', (f'%{busqueda}%', f'%{busqueda}%', f'%{busqueda}%', f'%{busqueda}%'))
     else:
         cursor.execute('SELECT * FROM productos')
         

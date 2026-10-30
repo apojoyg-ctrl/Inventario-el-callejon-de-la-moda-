@@ -7,36 +7,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #09090b 0%, #18181b 50%, #7f1d1d 100%);
+            background: radial-gradient(circle at 50% 10%, #1e1b4b 0%, #09090b 45%, #2a0808 100%);
             height: 100vh;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             color: #ffffff;
         }
         .card-login {
-            background: rgba(24, 24, 27, 0.85);
+            background: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-top: 4px solid #3b82f6;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-top: 4px solid #d4af37;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
         }
         .login-logo {
             width: 70px;
             height: 70px;
             object-fit: cover;
             border-radius: 50%;
-            border: 2px solid #3b82f6;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border: 2px solid #d4af37;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
         }
-        .btn-blue {
-            background-color: #3b82f6;
-            color: white;
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
+            color: #000000;
             border: none;
-            font-weight: 600;
+            font-weight: 700;
         }
-        .btn-blue:hover {
-            background-color: #2563eb;
-            color: white;
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #e6c55c 0%, #d4af37 100%);
+            color: #000000;
         }
     </style>
 </head>
@@ -47,11 +47,10 @@
             <div class="col-md-4">
                 <div class="card card-login p-4">
                     <div class="card-body text-center">
-                        <!-- Logo en la pantalla de inicio de sesión -->
                         <img src="{{ url_for('static', filename='uploads/logo de la tienda.jpg') }}" alt="Logo Tienda" class="login-logo mb-3">
                         
                         <h3 class="fw-bold text-white mb-1">EL CALLEJÓN</h3>
-                        <p class="text-info small mb-4 fw-semibold tracking-widest text-uppercase">de la moda</p>
+                        <p class="small mb-4 fw-semibold tracking-widest text-uppercase" style="color: #d4af37 !important;">de la moda</p>
                         
                         {% if error %}
                             <div class="alert alert-danger text-center p-2 mb-3 small bg-danger text-white border-0">{{ error }}</div>
@@ -66,7 +65,7 @@
                                 <label class="form-label text-light small">Contraseña</label>
                                 <input type="password" class="form-control bg-dark text-white border-secondary" name="password" required placeholder="••••">
                             </div>
-                            <button type="submit" class="btn btn-blue w-100 mt-2 py-2">Ingresar al Sistema</button>
+                            <button type="submit" class="btn btn-gold w-100 mt-2 py-2">Ingresar al Sistema</button>
                         </form>
                     </div>
                 </div>
