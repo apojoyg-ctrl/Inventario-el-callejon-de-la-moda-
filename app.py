@@ -9,8 +9,8 @@ UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-USUARIO_CORRECTO = "callejon02"
-PASSWORD_CORRECTO = "calle2323"
+USUARIO_CORRECTO = "admin"
+PASSWORD_CORRECTO = "1234"
 
 def init_db():
     conn = sqlite3.connect('inventario.db')
@@ -167,4 +167,3 @@ def eliminar(id):
 if __name__ == '__main__':
     init_db()
     app.run(debug=True)
-
