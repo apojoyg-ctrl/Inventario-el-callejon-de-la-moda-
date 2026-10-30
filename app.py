@@ -9,8 +9,8 @@ UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-USUARIO_CORRECTO = "Breilyg"
-PASSWORD_CORRECTO = "Nos costo un monton"
+USUARIO_CORRECTO = "Andreag"
+PASSWORD_CORRECTO = "Estamos desvelados"
 
 def init_db():
     conn = sqlite3.connect('inventario.db')
